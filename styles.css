@@ -440,6 +440,7 @@
 
     .project1__pic {
         max-width: 250px;
+        align-items: flex-start;
         margin: 40px 10px 10px 10px;
     }
 
