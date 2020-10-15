@@ -404,6 +404,7 @@
 
     .skills {
         flex-wrap: wrap;
+        align-items: flex-start;
         margin-bottom: 50px;
     }
 
@@ -420,6 +421,8 @@
     .project1 {
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start; 
+        /* Align items needed because of known safari bug that stretches content to its full size rather than within its parent. */
         margin: 10px;
         padding: 5px;
     }
@@ -427,6 +430,7 @@
     .project2 {
         flex-wrap: wrap;
         justify-content: center;
+        align-items: flex-start;
         margin: 10px;
         padding: 5px;
     }
