@@ -1,8 +1,6 @@
 /* General styling applying to the entire document, for example background. */
 
 html {
-    /* font-size: 10px; */
-    background-color: (249, 251, 252);
     scroll-behavior: smooth;
 }
 
@@ -267,7 +265,7 @@ As the second project is situated to the right rather than to the right, it has 
 @media only screen and (max-width: 1299px) {
 
     .topNav {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     .topNav a {
