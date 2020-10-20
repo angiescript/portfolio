@@ -1,13 +1,13 @@
+/* General styling applying to the entire document, for example background. */
+
 .html {
     font-size: 10px;
     background-color: (249, 251, 252);
-    
 }
 
 .body {
     margin: 0px;
     background-color: rgb(249, 251, 252);
-    
 }
 
 .site {
@@ -21,6 +21,8 @@
     height: 100%;
 }
 
+/* Styling applying to the "heading", inluding the profile picture, name, subheading and the short introduction. */
+
 .heading {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -28,7 +30,6 @@
     padding: 10px 10px 80px 10px;
     margin: 150px 150px 50px 150px;
     justify-content: space-between;
-    
 }
 
 .heading__pic {
@@ -50,7 +51,6 @@
     grid-row: 1 / 3;
     margin: 10px 10px 0px 10px;
     padding: 10px 10px 0px 10px;
-    
 }
 
 .heading__subHeading {
@@ -61,7 +61,6 @@
     grid-column: 4 / 7;
     margin: 0px 10px;
     padding: 0px 10px;
-    
 }
 
 .heading__description {
@@ -71,15 +70,14 @@
     grid-column: 3 / 7;
     margin: 0px 10px 10px 10px;
     padding: 0px 10px 10px 10px;
-   
 }
 
+/* Styling for the three skill-boxes with their icons. */
 
 .skills {
     display: flex;
     justify-content: center;
     background-color: rgb(249, 251, 252);
-    
 }
 
 .icon {
@@ -89,50 +87,38 @@
     border-radius: 5%;
 }
 
+/* General styling for the project-container "content". In this container, all projects will be situated in the portfolio. */
+
 .content {
     display: flex;
     flex-direction: column;
     background-color: rgb(249, 251, 252);
     margin: 0px;
     padding: 10px 200px;
-    
 }
 
-.project1 {
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkslategray;
+}
+
+a:hover {
+    color: rgb(112, 141, 109);
+}
+
+/* Styling for the boxes including each individual project. In each project flexbox there are a picture, a heading (which is also a link) and a description.
+As the second project is situated to the right rather than to the right, it has it's own CSS styling in the first block. */
+
+.project1, .project3 {
     display: flex;
     justify-content: left;
     background-color: rgb(197, 224, 195);
     margin: 100px 200px 50px 200px;
-    padding: 10px;
-    
-}
-
-.project1__texts {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 10px;
-    margin: 10px;
-    
-}
-
-.project1__pic {
-    max-width: 40%;
-    border: 5px outset rgb(112, 141, 109);
-    margin: 10px 50px 10px 10px;
-}
-
-.project1__heading {
-    font-family: "Alike Angular";
-    font-size: 2rem;
-    text-align: left;
-}
-
-.project1__description {
-    margin: 0px;
-    font-family: "Alike Angular";
-    font-size: 1.5rem; 
-    
+    padding: 10px;   
 }
 
 .project2 {
@@ -142,45 +128,9 @@
     justify-content: right;
     margin: 50px 200px;
     padding: 10px;
-    
 }
 
-.project2__texts {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding: 10px;
-    margin: 10px;
-    
-}
-
-.project2__pic {
-    max-width: 40%;
-    border: 5px outset rgb(112, 141, 109);
-    margin: 10px 10px 10px 50px;
-}
-
-.project2__heading {
-    font-family: "Alike Angular";
-    font-size: 2rem;
-    text-align: left;
-}
-
-.project2__description {
-    margin: 0px;
-    font-family: "Alike Angular";
-    font-size: 1.5rem; 
-    
-}
-
-.project3 {
-    display: flex;
-    background-color: rgb(197, 224, 195);
-    margin: 50px 200px 100px 200px;
-    padding: 10px;
-}
-
-.project3__texts {
+.project1__texts, .project2__texts, .project3__texts {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -188,23 +138,25 @@
     margin: 10px;
 }
 
-.project3__pic {
+.project1__pic, .project2__pic, .project3__pic {
     max-width: 40%;
     border: 5px outset rgb(112, 141, 109);
     margin: 10px 50px 10px 10px;
 }
 
-.project3__heading {
+.project1__heading, .project2__heading, .project3__heading {
     font-family: "Alike Angular";
     font-size: 2rem;
     text-align: left;
 }
 
-.project3__description {
+.project1__description, .project2__description, .project3__description {
     margin: 0px;
     font-family: "Alike Angular";
     font-size: 1.5rem; 
 }
+
+/* Styling for the last container which is a flexbox containing contact information. */
 
 .contactInfo {
     display: flex;
@@ -219,6 +171,8 @@
     font-size: 1.5rem;
     margin: 20px;
 }
+
+/* Below are the responsive stylings depending on screen size.  */
 
 @media only screen and (max-width: 1900px) {
 
@@ -260,20 +214,11 @@
         padding: 100px;
     }
     
-    .project1 {
+    .project1, .project2, .project3 {
         margin: 10px;
         padding: 20px;
     }
 
-    .project2 {
-        margin: 10px;
-        padding: 20px;
-    }
-
-    .project3 {
-        margin: 10px;
-        padding: 20px;
-    }
 }
 
 @media only screen and (max-width: 1299px) {
@@ -294,7 +239,6 @@
     }
 
     .heading__subHeading {
-        grid-row: ;
         font-size: 2rem;
         text-shadow: none;
         text-align: right;
@@ -316,55 +260,22 @@
         padding: 50px;
     }
     
-    .project1__heading {
+    .project1__heading, .project2__heading, .project3__heading {
         font-size: 1.5rem;
     }
 
-    .project2__heading {
-        font-size: 1.5rem;
-    }
-
-    .project3__heading {
-        font-size: 1.5rem;
-    }
-
-    .project1__description {
+    .project1__description, .project2__description, .project3__description {
         font-size: 1rem; 
-    
     }
-    .project2__description {
-        font-size: 1rem; 
     
-    }
-
-    .project3__description {
-        font-size: 1rem; 
-    
-    }
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1299px) {
-    .project1__heading {
-        font-size: 2rem;
-    }
-
-    .project2__heading {
-        font-size: 2rem;
-    }
-
-    .project3__heading {
+    .project1__heading, .project2__heading, .project3__heading {
         font-size: 2rem;
     }
     
-    .project1__description {
-        font-size: 1.4rem;
-    }
-
-    .project2__description {
-        font-size: 1.4rem;
-    }
-
-    .project3__description {
+    .project1__description, .project2__description, .project3__description {
         font-size: 1.4rem;
     }
 }
@@ -418,7 +329,7 @@
         padding: 0px;
     }
     
-    .project1 {
+    .project1, .project2, .project3 {
         flex-wrap: wrap;
         justify-content: center;
         align-items: flex-start; 
@@ -427,73 +338,21 @@
         padding: 5px;
     }
 
-    .project2 {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 10px;
-        padding: 5px;
-    }
-
-    .project3 {
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        margin: 10px;
-        padding: 5px;
-    }
-
-    .project1__pic {
+    .project1__pic, .project2__pic, .project3__pic {
         max-width: 250px;
         margin: 40px 10px 10px 10px;
     }
 
-    .project2__pic {
-        max-width: 250px;
-        margin: 40px 10px 10px 10px;
-    }
-
-    .project3__pic {
-        max-width: 250px;
-        margin: 40px 10px 10px 10px;
-    }
-
-    .project1__heading {
+    .project1__heading, .project2__heading, .project3__heading {
         margin: 10px;
         font-size: 2rem;
         text-align: center;
     }
 
-    .project2__heading {
-        margin: 10px;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .project3__heading {
-        margin: 10px;
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .project1__description {
+    .project1__description, .project2__description, .project3__description {
         margin: 0px;
         font-family: "Alike Angular";
         font-size: 1.2rem; 
-    
-    }
-    .project2__description {
-        margin: 0px;
-        font-family: "Alike Angular";
-        font-size: 1.2rem; 
-    
-    }
-
-    .project3__description {
-        margin: 0px;
-        font-family: "Alike Angular";
-        font-size: 1.2rem; 
-    
     }
 
     .contactInfo {
@@ -501,8 +360,6 @@
         align-items: center;
         margin: 50px 10px;
     }
-
-    
 
     
 }
