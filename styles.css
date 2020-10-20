@@ -1,16 +1,17 @@
 /* General styling applying to the entire document, for example background. */
 
-.html {
-    font-size: 10px;
+html {
+    /* font-size: 10px; */
     background-color: (249, 251, 252);
+    scroll-behavior: smooth;
 }
 
 .body {
-    margin: 0px;
     background-color: rgb(249, 251, 252);
 }
 
 .site {
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("resources/img/background.jpg");
@@ -19,6 +20,32 @@
     background-position: top center;
     background-size: contain;
     height: 100%;
+    
+}
+
+/* Styling for the top navigation bar. */
+
+.topNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Alike Angular";
+    font-size: 1.65rem;
+    background-color: rgb(230, 212, 200);
+}
+
+.topNav a {
+    padding: 1.5rem;
+    transition-duration: 1s;
+}
+
+.topNav a:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: black;
 }
 
 /* Styling applying to the "heading", inluding the profile picture, name, subheading and the short introduction. */
@@ -82,7 +109,7 @@
 
 .icon {
     max-height: 100px;
-    margin: 0px 50px 0px 50px;
+    margin: 100px 50px 0px 50px;
     border: 8px outset rgb(188, 161, 143);
     border-radius: 5%;
 }
@@ -108,6 +135,7 @@ a:visited {
 
 a:hover {
     color: rgb(112, 141, 109);
+    text-decoration: underline;
 }
 
 /* Styling for the boxes including each individual project. In each project flexbox there are a picture, a heading (which is also a link) and a description.
@@ -140,7 +168,6 @@ As the second project is situated to the right rather than to the right, it has 
 
 .project1__pic, .project2__pic, .project3__pic {
     max-width: 40%;
-    border: 5px outset rgb(112, 141, 109);
     margin: 10px 50px 10px 10px;
 }
 
@@ -160,19 +187,31 @@ As the second project is situated to the right rather than to the right, it has 
 
 .contactInfo {
     display: flex;
-    border: 2px solid darkslategray;
+    background-color: rgb(230, 212, 200);
     margin: 100px 10px;
     padding: 10px;
     justify-content: space-around;
+    align-items: center;
 }
 
 .contactInfo__info {
+    text-align: center;
     font-family: "Alike Angular";
-    font-size: 1.5rem;
-    margin: 20px;
+    font-size: 1.3rem;
+    margin: 10px;
 }
 
-/* Below are the responsive stylings depending on screen size.  */
+.contactInfo a {
+    padding: 0.5rem;
+    transition-duration: 1s;
+}
+
+.contactInfo a:hover {
+    background-color: rgba(255,255,255,0.5);
+    color: black;
+}
+
+/* Below are the responsive stylings depending on screen size. */
 
 @media only screen and (max-width: 1900px) {
 
@@ -205,6 +244,10 @@ As the second project is situated to the right rather than to the right, it has 
         margin-top: 10px;
     }
 
+    .skills {
+        padding-top: 50px;
+    }
+
     .icon {
         margin: 50px 100px;
         max-width: 30%;
@@ -222,6 +265,14 @@ As the second project is situated to the right rather than to the right, it has 
 }
 
 @media only screen and (max-width: 1299px) {
+
+    .topNav {
+        font-size: 1rem;
+    }
+
+    .topNav a {
+        padding: 0.5rem;
+    }
 
     .heading {
         padding: 10px;
@@ -271,6 +322,11 @@ As the second project is situated to the right rather than to the right, it has 
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1299px) {
+
+    .topNav {
+        font-size: 1.4rem;
+    }
+
     .project1__heading, .project2__heading, .project3__heading {
         font-size: 2rem;
     }
@@ -282,6 +338,14 @@ As the second project is situated to the right rather than to the right, it has 
 
 @media only screen and (max-width: 800px) {
     
+    .topNav {
+        font-size: 0.9rem;
+    }
+
+    .topNav a {
+        padding: 0.8rem;
+    }
+
     .heading {
         padding: 10px;
         margin: 10px;
@@ -314,6 +378,7 @@ As the second project is situated to the right rather than to the right, it has 
     }
 
     .skills {
+        padding-top: 50px;
         flex-wrap: wrap;
         align-items: flex-start;
         margin-bottom: 50px;
@@ -327,6 +392,7 @@ As the second project is situated to the right rather than to the right, it has 
     .content {
         flex-wrap: wrap;
         padding: 0px;
+        padding-top: 30px;
     }
     
     .project1, .project2, .project3 {
@@ -357,9 +423,13 @@ As the second project is situated to the right rather than to the right, it has 
 
     .contactInfo {
         flex-wrap: wrap;
+        font-size: 0.9rem;
         align-items: center;
         margin: 50px 10px;
     }
 
-    
+    .contactInfo a {
+        padding: 0.1rem;
+    }
+
 }

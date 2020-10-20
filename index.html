@@ -4,10 +4,11 @@
 <!-- Welcome to this portfolio! The HTML code is structured as follows:
 
 1. General HTML document settings and links to stylesheets (both internal and external)
-2. The Grid containing the heading, which includes the profile picture, name, subheading and description of me
-3. The flexbox containing the skill-section, including icons of HTML, CSS and js
-4. The flexbox containing the actual project content, which in turns inlcudes flexboxes with the picture and the texts
-5. The last box containing contact information
+2. Menu to navigate on the site
+3. The Grid containing the heading, which includes the profile picture, name, subheading and description of me
+4. The flexbox containing the skill-section, including icons of HTML, CSS and js
+5. The flexbox containing the actual project content, which in turns inlcudes flexboxes with the picture and the texts
+6. The last box containing contact information
 
 For more information on styling, please check out the "resources" folder for images and styleguides. -->
 
@@ -24,9 +25,19 @@ For more information on styling, please check out the "resources" folder for ima
 </head>
 
 <body>
-    <main class="site">
 
-<!-- 2. Grid with heading section -->
+    <main id="home" class="site">
+
+        <!-- 2. Navigation top bar section -->
+
+        <nav class="topNav"> 
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+<!-- 3. Grid with heading section -->
 
         <div class="heading">
             <img class="heading__pic" src="resources/img/profile.jpg" a="A picture of me, Angelika">
@@ -44,27 +55,28 @@ For more information on styling, please check out the "resources" folder for ima
             </p>
         </div>
 
-<!-- 3. Skill section -->
+<!-- 4. Skill section -->
 
-        <div class="skills">
+        <div id="skills" class="skills">
             <img class="icon" src="resources/img/html.jpg" a="HTML Icon">
             <img class="icon" src="resources/img/css.jpg" a="CSS Icon">
             <img class="icon" src="resources/img/js.jpg" a=".js Icon">
 
         </div>
 
-<!-- 4. Content about the portfolio projects -->
+<!-- 5. Content about the portfolio projects -->
 
-        <div class="content">
+        <div id="projects" class="content">
 
             <div class="project1">
                 <img class="project1__pic" src="resources/img/lodashJs.png" a="Lodash project">
                     <div class=project1__texts>
-                        <a href="https://github.com/angiescript/pjs-capstone-lodash"><h2 class=project1__heading>The Lodash Library Project</h2></a>
+                        <a href="https://github.com/angiescript/pjs-capstone-lodash" target="_blank"><h2 class=project1__heading>The Lodash Library Project</h2></a>
                         <p class="project1__description"> 
-                            Read more about my lodash replica! Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Blanditiis non amet tempora obcaecati, adipisci pariatur optio excepturi reiciendis saepe nesciunt 
-                            voluptates asperiores numquam voluptate deleniti, enim inventore officia, repellendus placeat.</p>
+                            As a final for my first JavaScript course on Codecademy, I wrote my own replica of the Lodash library.
+                            <br><br>Lodash is used for iterating arrays, objects, & strings, manipulating & testing values, 
+                                and creating composite functions. 
+                            <br>This was my first non-guided project and I am still very proud of it! </p>
                     </div>
                 
             </div>
@@ -72,32 +84,34 @@ For more information on styling, please check out the "resources" folder for ima
             <div class="project2">
                 <img class="project2__pic" src="resources/img/pictureBox.PNG" a="Picture box project">
                 <div class="project2__texts">
-                    <a href="https://github.com/angiescript/pictureBox"><h2 class="project2__heading">The Picture Box Project</h2></a>
+                    <a href="https://github.com/angiescript/pictureBox" target="_blank"><h2 class="project2__heading">The Picture Box Project</h2></a>
                     <p class="project2__description"> 
-                        Read more about my picturebox built using flexbox! Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Ducimus rerum placeat debitis qui fugiat iste repudiandae neque, nam similique recusandae id, incidunt ad 
-                        minus quidem ratione ullam natus, consectetur sapiente?</p>
+                        One of the first tasks in my current HTML and CSS course was to build an image gallery. 
+                        <br><br>I named my gallery 'the Picture Box Project' and, using flexbox, made sure to practice responsive designs.
+                        <br><br>Another aspect in this project was designing and positioning, and I enjoyed the flexibility of
+                        choosing the color scheme and fonts. </p>
                 </div>
             </div>
 
             <div class="project3">
                 <img class="project3__pic" src="resources/img/teaCozy.jpg" a="TeaCozy project">
                 <div class="project3__texts">
-                    <a href="https://github.com/angiescript/teaCozy"><h2 class="project3__heading">The TeaCozy Project</h2></a>
+                    <a href="https://github.com/angiescript/teaCozy" target="_blank"><h2 class="project3__heading">The TeaCozy Project</h2></a>
                     <p class="project3__description"> 
-                        The project TeaCozy was a project part of the web development course at Codecademy. Featuring HTML and CSS it was one of my first projecs 
+                        The project TeaCozy was a project part of the web development course at Codecademy. 
+                        <br><br>Featuring HTML and CSS it was one of my first projects 
                         and it taught me the fundamentals of working with a website. The project was built as a real client case where I did none of the designing, 
                         but recieved a design specification from the 'client'. </p>
                 </div>
                 
             </div>
 
-<!-- 5. Flexbox with contact information -->
+<!-- 6. Flexbox with contact information -->
 
-            <div class="contactInfo">
-                <p class="contactInfo__info">Contact info 1</p>
-                <p class="contactInfo__info">Contact info 2</p>
-                <p class="contactInfo__info">Contact info 3</p>
+            <div id="contact" class="contactInfo">
+                <a href="mailto:carinangelika.johansson@gmail.com" class="contactInfo__info">Send me an email</a>
+                <a href="https://www.linkedin.com/in/johanssonangelika/" target="_blank" class="contactInfo__info">Visit my LinkedIn</a>
+                <a href="tel:0046730225052" class="contactInfo__info">Give me a call</a>
             </div>
         </div>
 
