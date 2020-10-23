@@ -5,8 +5,9 @@ html {
     scroll-behavior: smooth;
 }
 
-.body {
+body {
     background-color: rgb(249, 251, 252);
+    margin: 0;
 }
 
 .site {
