@@ -1,3 +1,4 @@
+
 /* General styling applying to the entire document, for example background. */
 
 html {
@@ -38,7 +39,7 @@ html {
 
 .topNav a {
     padding: 1.5rem;
-    transition-duration: 1s;
+    transition-duration: 200ms;
 }
 
 .topNav a:hover {
@@ -166,6 +167,7 @@ As the second project is situated to the right rather than to the right, it has 
 
 .project1__pic, .project2__pic, .project3__pic {
     max-width: 40%;
+    align-self: center;
     margin: 10px 50px 10px 10px;
 }
 
@@ -201,7 +203,7 @@ As the second project is situated to the right rather than to the right, it has 
 
 .contactInfo a {
     padding: 0.5rem;
-    transition-duration: 1s;
+    transition-duration: 200ms;
 }
 
 .contactInfo a:hover {
